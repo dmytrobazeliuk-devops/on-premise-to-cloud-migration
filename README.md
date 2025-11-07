@@ -1,46 +1,45 @@
 # On-Premise to Cloud Migration
 
-Large-scale migration solution for moving on-premise data centers to cloud infrastructure
+Comprehensive migration strategy and tools for moving on-premise infrastructure to AWS/GCP with zero downtime.
 
 ## Features
 
-- **Automated Infrastructure**: Automated provisioning and management
-- **Best Practices**: Follows industry best practices and standards
-- **Scalable**: Designed for scalability and high availability
-- **Documentation**: Comprehensive documentation and examples
+- **Migration Planning**: Detailed migration phases and strategies
+- **Database Migration**: Automated database migration scripts
+- **Infrastructure as Code**: Terraform configurations for target infrastructure
+- **Zero Downtime**: Strategies for minimal disruption
+- **Rollback Procedures**: Safe migration with rollback options
 
-## Tech Stack
+## Migration Phases
 
-Ansible, AWS, Migration
+1. **Assessment**: Inventory and analyze on-premise resources
+2. **Planning**: Design target architecture and timeline
+3. **Pilot**: Test migration with non-critical workloads
+4. **Full Migration**: Migrate production workloads
 
-## Installation
+## Migration Strategies
 
-### Prerequisites
-
-- See individual module documentation for specific requirements
-
-### Setup
-
-1. Clone the repository:
-```bash
-git clone https://github.com/dmytrobazeliuk-devops//var/www/vhosts/devsecops.cv/projects_repos/on-premise-to-cloud-migration.git
-cd /var/www/vhosts/devsecops.cv/projects_repos/on-premise-to-cloud-migration
-```
-
-2. Follow the setup instructions in the documentation
+- **Rehost**: Lift and shift (quick migration)
+- **Replatform**: Optimize for cloud services
+- **Refactor**: Modernize and re-architect
 
 ## Usage
 
-See individual module documentation for usage examples.
+### Database Migration
 
-## Project Structure
-
+```bash
+export SOURCE_HOST=onprem-db.example.com
+export TARGET_HOST=migration-db.xxxxx.us-east-1.rds.amazonaws.com
+./scripts/migrate-database.sh
 ```
-/var/www/vhosts/devsecops.cv/projects_repos/on-premise-to-cloud-migration/
-├── README.md              # This file
-├── modules/               # Reusable modules
-├── examples/              # Usage examples
-└── docs/                  # Documentation
+
+### Infrastructure Setup
+
+```bash
+cd terraform
+terraform init
+terraform plan
+terraform apply
 ```
 
 ## Contributing
